@@ -8,20 +8,27 @@ import { getStorage } from "firebase/storage";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDjrdtaiiKftvbmtiK1JS35N-f3dmmh-9M",
-  authDomain: "fir-messenger-730e5.firebaseapp.com",
-  projectId: "fir-messenger-730e5",
-  storageBucket: "fir-messenger-730e5.appspot.com",
-  messagingSenderId: "434814905751",
-  appId: "1:434814905751:web:f36d2fbce0a311d111e8d2",
-  dataBaseURL: "https://fir-messenger-730e5.firebaseio.com",
+  apiKey: "AIzaSyBlMAHsp-8faaEM0NN1CtdESh_E9G48NYw",
+  authDomain: "chat-app-aeba6.firebaseapp.com",
+  projectId: "chat-app-aeba6",
+  storageBucket: "chat-app-aeba6.appspot.com",
+  messagingSenderId: "858011322943",
+  appId: "1:858011322943:web:8e95595e09260a9ca2c68a",
+  dataBaseURL: "https://chat-app-aeba6.firebaseio.com",
 };
+
+
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+// initialize Authentication via gmail
 const auth = getAuth(app);
+// initalize database for storring profile and chat related info..
 const db = getFirestore(app);
+// initalize storage for saing images.
 const storage = getStorage(app);
 
 export { auth, db, storage };
